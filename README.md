@@ -1,50 +1,48 @@
-# File-Sharing-System
+# Safe-Send-Secure-File-Sharing-System
 
-## **Team Members:**
-| **Name**              | **SRN**       |
-| -----------------| -----------------|
-| Sukruthi Sanampudi	  | PES2UG21CS472    |
-| Himanshu Nanda     | PES2UG21CS915  |
-| Hithesh S           | PES2UG21CS916   |
-| Kushaagra Shrivastava       | PES2UG21CS917    |
+## Team Members
+| Name                  | SRN            |
+| --------------------- | -------------- |
+| Sukruthi Sanampudi   | PES2UG21CS472 |
+| Himanshu Nanda        | PES2UG21CS915 |
+| Hithesh S              | PES2UG21CS916 |
+| Kushaagra Shrivastava | PES2UG21CS917 |
 
 ## Problem Statement
-Secure File Sharing P2P application. Developed using SpringMVC framework, built using Maven.
+The project is an end-to-end secure file sharing system, following the P2P architecture. It is developed using the SpringMVC framework and built with Maven.
 
- The project is an end to end secure file sharing system which mimics the P2P architecture. Files are shared via a room which is created by the client. The invite link of the sharing platform which in this case is a room is created for the peers who want to access and download files. The link has to be submitted by each peer to join the network to send or receive the files. The files being sent are encrypted with AES (Advanced Encryption Standard) encryption algorithm. On the sender side the file is encrypted using the secret key before sending the file.
-      
-  The encrypted files are decrypted on the receiving end using the secret key available in the room to validate the file. After the decryption the file is downloaded on the receiving end. In order to account for the file not being corrupted, the concept of checksum is used to verify the integrity of the file. The checksum algorithm used here is SHA-256. The encrypted file here is being sent to the peers in the room using different sockets in the local system presently. All the files being sent/transmitted in the room are stored in the mongodb database for future reference of the ongoing session. Each user is assigned a database to keep track of his files used in the session.
-  
-### To Run the Project 
- - Git Clone The Repository 
- ```
- git clone https://github.com/yoyozaemon/File-Sharing-System.git 
- ```
- 
- - Change the Current Directory
- ```
- cd File-Sharing-System
- ```
- - Install the Maven Package for the Project
- ```
- mvn install
- &
- mvn clean install
- ```
- - To execute the code
- ```
- mvn spring-boot:run
- ```
- - Open the Any Browser and type localhost:{portnumber}
-    - For PEER - 1{8001} & PEER - 2{8002}
-````
- http://localhost:8001
- &&
- http://localhost:8002
-````
+### Overview
+The system allows secure file sharing through rooms created by clients. Each room has an invite link that peers use to join the network for sending or receiving files. Files are encrypted using AES (Advanced Encryption Standard) encryption algorithm before transmission. The sender encrypts the file with a secret key before sending it, and the receiver decrypts it using the same key available in the room. Additionally, checksums are used to verify file integrity, with SHA-256 as the checksum algorithm. Encrypted files are stored in MongoDB for future reference.
 
-> **Note**
->> Connect to MongoDB before running the project. 
->>> Build/Create a database with the names **FileDB1** and **FileDB2**
- 
-> OOADJ Project 2023
+## Running the Project
+1. Clone the Repository:
+    ```
+    git clone https://github.com/himanshunanda22/Safe-Send-Secure-File-Sharing-System.git
+    ```
+2. Change to the Project Directory:
+    ```
+    cd Safe-Send-Secure-File-Sharing-System
+    ```
+3. Install Maven Dependencies:
+    ```
+    mvn install
+    ```
+    ```
+    mvn clean install
+    ```
+4. Execute the Code:
+    ```
+    mvn spring-boot:run
+    ```
+5. Access the Application in a Browser:
+    - For PEER-1 (Port 8001) and PEER-2 (Port 8002):
+        ```
+        http://localhost:8001
+        ```
+        ```
+        http://localhost:8002
+        ```
+
+    > **Note:** 
+    > - Connect to MongoDB before running the project.
+    > - Create databases named **FileDB1** and **FileDB2**.
