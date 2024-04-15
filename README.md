@@ -3,10 +3,10 @@
 ## **Team Members:**
 | **Name**              | **SRN**       |
 | -----------------| -----------------|
-| Chandan Kumar S  | PES2UG20CS804    |
-| Chinmay Gowda     | PES2UG20CS902  |
-| Suraj S Raju           | PES2UG20CS812   |
-| Vijay J      | PES2UG20CS815    |
+| Sukruthi Sanampudi	  | PES2UG21CS472    |
+| Himanshu Nanda     | PES2UG21CS915  |
+| Hithesh S           | PES2UG21CS916   |
+| Kushaagra Shrivastava       | PES2UG21CS917    |
 
 ## Problem Statement
 Secure File Sharing P2P application. Developed using SpringMVC framework, built using Maven.
